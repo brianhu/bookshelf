@@ -8,7 +8,6 @@
 
 #import "MasterViewController.h"
 
-#import "DetailViewController.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -27,8 +26,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewBook:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,7 +36,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
+- (void)insertNewBook:(id)sender
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
@@ -105,14 +104,14 @@
     return NO;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setDetailItem:object];
-    }
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+//        [[segue destinationViewController] setDetailItem:object];
+//    }
+//}
 
 #pragma mark - Fetched results controller
 
