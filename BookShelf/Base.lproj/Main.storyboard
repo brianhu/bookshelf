@@ -92,13 +92,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfR-bM-Tm9">
-                                            <rect key="frame" x="11" y="11" width="55" height="21"/>
+                                            <rect key="frame" x="13" y="11" width="55" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="C3e-OW-Pw3" kind="push" id="jPF-iC-HOD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -109,9 +112,6 @@
                     <navigationItem key="navigationItem" id="rnd-2Y-H88">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="0oE-BN-3lH"/>
                     </navigationItem>
-                    <connections>
-                        <segue destination="C3e-OW-Pw3" kind="push" id="osV-q8-wph"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5y-wF-lX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
