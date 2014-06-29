@@ -25,6 +25,8 @@
 		D3FF79DE19600D0A007389C6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FF79B919600D0A007389C6 /* CoreData.framework */; };
 		D3FF79E619600D0A007389C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3FF79E419600D0A007389C6 /* InfoPlist.strings */; };
 		D3FF79E819600D0A007389C6 /* BookShelfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF79E719600D0A007389C6 /* BookShelfTests.m */; };
+		D3FF79F219600F37007389C6 /* BookInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FF79F119600F37007389C6 /* BookInfoCell.xib */; };
+		D3FF79F7196011A9007389C6 /* AddReadingPopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FF79F6196011A9007389C6 /* AddReadingPopUpView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		D3FF79E319600D0A007389C6 /* BookShelfTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BookShelfTests-Info.plist"; sourceTree = "<group>"; };
 		D3FF79E519600D0A007389C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3FF79E719600D0A007389C6 /* BookShelfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfTests.m; sourceTree = "<group>"; };
+		D3FF79F119600F37007389C6 /* BookInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookInfoCell.xib; sourceTree = "<group>"; };
+		D3FF79F6196011A9007389C6 /* AddReadingPopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddReadingPopUpView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				D3FF79CE19600D0A007389C6 /* MasterViewController.m */,
 				D3FF79D019600D0A007389C6 /* DetailViewController.h */,
 				D3FF79D119600D0A007389C6 /* DetailViewController.m */,
+				D3FF79F119600F37007389C6 /* BookInfoCell.xib */,
+				D3FF79F6196011A9007389C6 /* AddReadingPopUpView.xib */,
 				D3FF79D319600D0A007389C6 /* Images.xcassets */,
 				D3FF79CA19600D0A007389C6 /* BookShelf.xcdatamodeld */,
 				D3FF79BC19600D0A007389C6 /* Supporting Files */,
@@ -242,6 +248,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3FF79F219600F37007389C6 /* BookInfoCell.xib in Resources */,
+				D3FF79F7196011A9007389C6 /* AddReadingPopUpView.xib in Resources */,
 				D3FF79D419600D0A007389C6 /* Images.xcassets in Resources */,
 				D3FF79C019600D0A007389C6 /* InfoPlist.strings in Resources */,
 				D3FF79C919600D0A007389C6 /* Main.storyboard in Resources */,
