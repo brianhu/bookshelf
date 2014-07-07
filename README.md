@@ -49,14 +49,17 @@ BookShelf is an open source iOS app. Bookshelf helps users organise their collec
 
 <h3 id="futureworkitems">Future work items</h3>
 
-A paragraph is simply one or more consecutive lines of text, separated
-by one or more blank lines. (A blank line is any line that looks like a
-blank line -- a line containing nothing but spaces or tabs is considered
-blank.) Normal paragraphs should not be indented with spaces or tabs.
+Resource utilisation and knowledge sharing are goals with no limits. We would like to add more featurs, especially social interaction ones, in the future. Here are some we are working on:
+   + Share a book via facebook
+   + Lend/Borrow a book from a facebook friend
+   + View the status of a book (on shelf or rented out)
+
+We are also planning payment and logistics to facilitate users to rent our their books with a fee. 
 
 <h3 id="fellfree">Feel very free</h3>
 
-Markdown supports two styles of headers, [Setext] [1] and [atx] [2].
+Feel very free to discuss with us about feedback, improvements, or just anything about BookShelf.
+You can reach us at Github account brianhu and ritayutingwang.
 
 * * *
 
