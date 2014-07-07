@@ -29,8 +29,10 @@ inspiration for Markdown's syntax is the format of plain text email.
 
 <h3 id="why">Why Using BookShelf?</h3>
 
-Markdown's syntax is intended for one purpose: to be used as a
-format for *writing* for the web.
+What books are there on your bookshelf?<br />
+Which books are recently read?<br />
+How much time did you spend on each of your book?<br />
+If you cannot, and you feel like you want to get to know your own bookshelf, BookShelf is here for you.
 
 <h3 id="what">What can BookShelf do?</h3>
 
