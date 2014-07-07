@@ -7,16 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Book.h"
 
 @interface BookDetailTableViewController : UITableViewController
 
-typedef NS_ENUM(NSInteger, DetailMode){
+- (IBAction)updateBookInfo:(id)sender;
+
+typedef NS_ENUM(NSInteger, ViewMode){
     EditMode = 0,
-    ViewMode = 1
+    NewMode = 1
 };
 
-@property (nonatomic) DetailMode detailMode;
 
-
+@property (nonatomic) ViewMode viewMode;
+@property (strong, nonatomic) Book *selectedBook;
 @end

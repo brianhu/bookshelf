@@ -10,6 +10,7 @@
 		38D52BFF19603DE300BD1664 /* BookInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D52BFE19603DE300BD1664 /* BookInfoCell.m */; };
 		38D52C0219603EFC00BD1664 /* BookDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D52C0119603EFC00BD1664 /* BookDetailTableViewController.m */; };
 		90CD48A5961D4D5AB756693F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82B7B9C65D3424195F4A30B /* libPods.a */; };
+		D3EB00DD196AEE1700F972D3 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB00DC196AEE1700F972D3 /* Book.m */; };
 		D3FF79B419600D0A007389C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FF79B319600D0A007389C6 /* Foundation.framework */; };
 		D3FF79B619600D0A007389C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FF79B519600D0A007389C6 /* CoreGraphics.framework */; };
 		D3FF79B819600D0A007389C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FF79B719600D0A007389C6 /* UIKit.framework */; };
@@ -47,6 +48,8 @@
 		38D52BFE19603DE300BD1664 /* BookInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfoCell.m; sourceTree = "<group>"; };
 		38D52C0019603EFC00BD1664 /* BookDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailTableViewController.h; sourceTree = "<group>"; };
 		38D52C0119603EFC00BD1664 /* BookDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailTableViewController.m; sourceTree = "<group>"; };
+		D3EB00DB196AEE1600F972D3 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = ../Book.h; sourceTree = "<group>"; };
+		D3EB00DC196AEE1700F972D3 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = ../Book.m; sourceTree = "<group>"; };
 		D3FF79B019600D0A007389C6 /* BookShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FF79B319600D0A007389C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D3FF79B519600D0A007389C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +139,8 @@
 		D3FF79BB19600D0A007389C6 /* BookShelf */ = {
 			isa = PBXGroup;
 			children = (
+				D3EB00DB196AEE1600F972D3 /* Book.h */,
+				D3EB00DC196AEE1700F972D3 /* Book.m */,
 				D3FF79C419600D0A007389C6 /* AppDelegate.h */,
 				D3FF79C519600D0A007389C6 /* AppDelegate.m */,
 				D3FF79C719600D0A007389C6 /* Main.storyboard */,
@@ -322,6 +327,7 @@
 				D3FF79C619600D0A007389C6 /* AppDelegate.m in Sources */,
 				38D52C0219603EFC00BD1664 /* BookDetailTableViewController.m in Sources */,
 				D3FF79C219600D0A007389C6 /* main.m in Sources */,
+				D3EB00DD196AEE1700F972D3 /* Book.m in Sources */,
 				D3FF79CC19600D0A007389C6 /* BookShelf.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
