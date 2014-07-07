@@ -56,7 +56,7 @@ Resource utilisation and knowledge sharing are goals with no limits. We would li
 
 We are also planning payment and logistics to facilitate users to rent our their books with a fee. 
 
-<h3 id="fellfree">Feel very free</h3>
+<h3 id="feelfree">Feel very free</h3>
 
 Feel very free to discuss with us about feedback, improvements, or just anything about BookShelf.
 You can reach us at Github account brianhu and ritayutingwang.
