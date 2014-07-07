@@ -33,8 +33,6 @@
 
 - (void)setInfo:(NSString *)key value:(NSString *)value mode:(NSInteger)mode {
     _cellKey.text = key;
-    if (mode == 1) { //view mode
-        _cellValue.text = value;
-    }
+    _cellValue.text = value;
 }
 @end

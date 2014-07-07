@@ -11,7 +11,7 @@
 #import <MagicalRecord.h>
 
 @interface BookDetailTableViewController ()
-@property (strong, nonatomic) NSDate *date;
+@property (strong, nonatomic) Book *book;
 @end
 
 @implementation BookDetailTableViewController
@@ -28,11 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    _book = _viewMode == 0 ? _selectedBook : [Book MR_createEntity];
+    _book.buyDate = _viewMode == 0 ? _book.buyDate : [NSDate date];
     [self.tableView registerNib:[UINib nibWithNibName:@"BookInfoCell" bundle:nil] forCellReuseIdentifier:@"BookInfoCell"];
-    
-    _detailMode = 1;
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -58,9 +57,9 @@
 {
     // Return the number of rows in the section.
     if (_viewMode == 0) //Edit mode
-        return 3;
-    else //View mode
         return 4;
+    else //New mode
+        return 3;
 }
 
 
@@ -73,13 +72,13 @@
         case 0: {
             BookInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BookInfoCell"
                                      forIndexPath:indexPath];
-            [cell setInfo:@"Name" value:@"" mode:_viewMode];
+            [cell setInfo:@"Name" value:_book.bookName mode:_viewMode];
             return cell;
         }
         case 1: {
             BookInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BookInfoCell"
                                      forIndexPath:indexPath];
-            [cell setInfo:@"Purchase Date" value:@"" mode:_viewMode];
+            [cell setInfo:@"Purchase Date" value:[_book buyDateToString] mode:_viewMode];
 
             //Use NSDateFormatter to write out the date in a friendly format
             UIDatePicker *timePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 250, 0, 0)];
@@ -92,8 +91,8 @@
         case 2: {
             BookInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BookInfoCell"
                                      forIndexPath:indexPath];
-            [cell setInfo:@"Price" value:@"" mode:_viewMode];
-            [cell.cellValue setKeyboardType:UIKeyboardTypeNumberPad];
+            [cell setInfo:@"Price" value:[_book.buyPrice stringValue] mode:_viewMode];
+            [cell.cellValue setKeyboardType:UIKeyboardTypeDecimalPad];
             return cell;
         }
         case 3: {
@@ -160,17 +159,15 @@
 */
 
 - (IBAction)updateBookInfo:(id)sender {
-    Book *book = _viewMode == 0 ? [Book MR_createEntity] : _selectedBook;
+
     
     NSIndexPath *index = [NSIndexPath indexPathForRow:0 inSection:0];
     BookInfoCell *cell = (BookInfoCell *)[self.tableView cellForRowAtIndexPath:index];
-    book.bookName = cell.cellValue.text;
-    
-    book.buyDate = _date;
+    _book.bookName = cell.cellValue.text;
     
     index = [NSIndexPath indexPathForRow:2 inSection:0];
     cell = (BookInfoCell *)[self.tableView cellForRowAtIndexPath:index];
-    book.buyPrice = @([cell.cellValue.text integerValue]);
+    _book.buyPrice = @([cell.cellValue.text doubleValue]);
     
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
@@ -184,6 +181,6 @@
     NSIndexPath *index = [NSIndexPath indexPathForRow:1 inSection:0];
     BookInfoCell *cell = (BookInfoCell *)[self.tableView cellForRowAtIndexPath:index];
     cell.cellValue.text = [formatter stringFromDate:[sender date]];
-    _date = [sender date];
+    _book.buyDate = [sender date];
 }
 @end

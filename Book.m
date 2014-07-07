@@ -17,4 +17,9 @@
 @dynamic buyPrice;
 @dynamic relationship;
 
+- (NSString *)buyDateToString {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"d/M/Y"];
+    return [formatter stringFromDate:self.buyDate];
+}
 @end

@@ -17,5 +17,5 @@
 @property (nonatomic, retain) NSDate * buyDate;
 @property (nonatomic, retain) NSNumber * buyPrice;
 @property (nonatomic, retain) NSManagedObject *relationship;
-
+- (NSString *)buyDateToString;
 @end
