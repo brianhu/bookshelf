@@ -36,7 +36,11 @@ If you cannot, and you feel like you want to get to know your own bookshelf, Boo
 
 <h3 id="what">What can BookShelf do?</h3>
 
-Bookshelf helps users organise their collection of books and record how much time they have spent on a book, and we also designed a special algorithm to calculate the cost performance of a book. This app aims to lower the barrier of knowledge management.
+BookShelf is an open source iOS app. Bookshelf helps users organise their collection of books and record how much time they have spent on a book, and the cost performance of a book. Users could have a good understanding of their own bookshelves and make brilliant decisions to take actions in the real world. The most updated version allows users to:
+   + View their own book collection
+   + View a book in the collection (including cost performance and reading records)
+   + Manage their own book collection (add/modify/delete)
+   + Add reading record of a book
 
 * * *
 
