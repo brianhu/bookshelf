@@ -15,8 +15,7 @@
 
 @property (nonatomic, retain) NSDate * readDate;
 @property (nonatomic, retain) NSNumber * readHour;
-@property (nonatomic, retain) NSNumber * recordID;
-@property (nonatomic, retain) Book *bookID;
+@property (nonatomic, retain) Book *book;
 
 - (NSString *)readDateToString;
 @end

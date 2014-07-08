@@ -9,8 +9,10 @@
 #import "ReadingRecordTableViewController.h"
 #import "ReadingRecord.h"
 #import "RecordSummaryCell.h"
+#import "AddReadingRecordPopupViewController.h"
+#import "UIViewController+MJPopupViewController.h"
 
-@interface ReadingRecordTableViewController ()
+@interface ReadingRecordTableViewController () <AddReadingRecordPopupViewDelegate>
 @property (strong, nonatomic) NSArray *records;
 @end
 
@@ -28,9 +30,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"bookID = %@", [_book objectID]];
-    self.fetchedResultsController = [ReadingRecord MR_fetchAllSortedBy:@"readDate" ascending:NO withPredicate:predicate groupBy:nil delegate:self];
 
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"book = %@", _book];
+    self.fetchedResultsController = [ReadingRecord MR_fetchAllSortedBy:@"readDate" ascending:NO withPredicate:predicate groupBy:nil delegate:self];
+//    self.fetchedResultsController = [ReadingRecord MR_fetchAllSortedBy:@"readDate" ascending:NO withPredicate:nil groupBy:nil delegate:self];
+//    NSLog(@"%d", [[self.fetchedResultsController fetchedObjects] count]);
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -100,9 +104,9 @@
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReadingRecordCell"
                                                     forIndexPath:indexPath];
             ReadingRecord *record = [self.fetchedResultsController fetchedObjects][indexPath.row];
-
             cell.textLabel.text = [record readDateToString];
-            cell.detailTextLabel.text = [record.readHour stringValue];
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ hour(s)", record.readHour];
+            return cell;
         }
         default:
             break;
@@ -225,9 +229,12 @@
     UITableView *tableView = self.tableView;
     
     switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
+        case NSFetchedResultsChangeInsert: {
+            NSIndexPath *customizedIndexPath = [NSIndexPath indexPathForRow:newIndexPath.row inSection:1];
+            [tableView insertRowsAtIndexPaths:@[customizedIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            // TODO: improve it!
+            [tableView reloadData];
+        } break;
             
         case NSFetchedResultsChangeDelete:
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -255,4 +262,20 @@
 //    cell.textLabel.text = book.bookName;
 //    cell.detailTextLabel.text = [book buyDateToString];
 //}
+- (IBAction)addRecord:(id)sender {
+    AddReadingRecordPopupViewController *popupVC = [[AddReadingRecordPopupViewController alloc] initWithNibName:@"AddReadingRecordPopUpView" bundle:nil];
+    popupVC.delegate = self;
+    [self presentPopupViewController:popupVC animationType:MJPopupViewAnimationFade];
+}
+
+- (void)dataSubmitted:(NSDate *)date hour:(NSInteger)hour {
+    ReadingRecord *readingRecord = [ReadingRecord MR_createEntity];
+    readingRecord.readDate = date;
+    NSInteger hours = [readingRecord.readHour integerValue];
+    readingRecord.readHour = @(hours + hour);
+    readingRecord.book = _book;
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+        [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
+    }];
+}
 @end

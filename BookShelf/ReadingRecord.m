@@ -14,8 +14,7 @@
 
 @dynamic readDate;
 @dynamic readHour;
-@dynamic recordID;
-@dynamic bookID;
+@dynamic book;
 
 - (NSString *)readDateToString {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

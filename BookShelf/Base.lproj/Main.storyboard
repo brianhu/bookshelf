@@ -100,7 +100,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="C3e-OW-Pw3" kind="push" id="jPF-iC-HOD"/>
+                                    <segue destination="C3e-OW-Pw3" kind="push" identifier="ReadingRecordSegue" id="jPF-iC-HOD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -214,7 +214,7 @@
                     <navigationItem key="navigationItem" id="VdQ-7e-8my">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Cc6-uC-BWV">
                             <connections>
-                                <action selector="AddRecord:" destination="C3e-OW-Pw3" id="gvp-xH-Pue"/>
+                                <action selector="addRecord:" destination="C3e-OW-Pw3" id="wpV-nk-eaM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
