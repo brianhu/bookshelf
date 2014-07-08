@@ -12,11 +12,11 @@
 		90CD48A5961D4D5AB756693F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82B7B9C65D3424195F4A30B /* libPods.a */; };
 		D32708B8196B660A00A816EC /* ReadingRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D32708B7196B660A00A816EC /* ReadingRecord.m */; };
 		D32708BD196B66EC00A816EC /* ReadingRecordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D32708BC196B66EC00A816EC /* ReadingRecordTableViewController.m */; };
-		D32708C0196B6BB700A816EC /* RecordSummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D32708BF196B6BB700A816EC /* RecordSummaryCell.m */; };
 		D32708C5196B8BCF00A816EC /* AddReadingRecordPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D32708C4196B8BCF00A816EC /* AddReadingRecordPopupViewController.m */; };
 		D32708C8196B971E00A816EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FF79C719600D0A007389C6 /* Main.storyboard */; };
 		D32708C9196B972300A816EC /* AddReadingRecordPopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32708C6196B967000A816EC /* AddReadingRecordPopUpView.xib */; };
-		D3EB00DD196AEE1700F972D3 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB00DC196AEE1700F972D3 /* Book.m */; };
+		D32708CC196BE4B200A816EC /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = D32708CB196BE4B200A816EC /* Book.m */; };
+		D32708CF196BE4C400A816EC /* RecordSummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D32708CE196BE4C400A816EC /* RecordSummaryCell.m */; };
 		D3FF79B419600D0A007389C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FF79B319600D0A007389C6 /* Foundation.framework */; };
 		D3FF79B619600D0A007389C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FF79B519600D0A007389C6 /* CoreGraphics.framework */; };
 		D3FF79B819600D0A007389C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FF79B719600D0A007389C6 /* UIKit.framework */; };
@@ -56,13 +56,13 @@
 		D32708B7196B660A00A816EC /* ReadingRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingRecord.m; sourceTree = "<group>"; };
 		D32708BB196B66EC00A816EC /* ReadingRecordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingRecordTableViewController.h; sourceTree = "<group>"; };
 		D32708BC196B66EC00A816EC /* ReadingRecordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingRecordTableViewController.m; sourceTree = "<group>"; };
-		D32708BE196B6BB700A816EC /* RecordSummaryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordSummaryCell.h; path = ../RecordSummaryCell.h; sourceTree = "<group>"; };
-		D32708BF196B6BB700A816EC /* RecordSummaryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecordSummaryCell.m; path = ../RecordSummaryCell.m; sourceTree = "<group>"; };
 		D32708C3196B8BCF00A816EC /* AddReadingRecordPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReadingRecordPopupViewController.h; sourceTree = "<group>"; };
 		D32708C4196B8BCF00A816EC /* AddReadingRecordPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReadingRecordPopupViewController.m; sourceTree = "<group>"; };
 		D32708C6196B967000A816EC /* AddReadingRecordPopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddReadingRecordPopUpView.xib; sourceTree = "<group>"; };
-		D3EB00DB196AEE1600F972D3 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = ../Book.h; sourceTree = "<group>"; };
-		D3EB00DC196AEE1700F972D3 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = ../Book.m; sourceTree = "<group>"; };
+		D32708CA196BE4B200A816EC /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		D32708CB196BE4B200A816EC /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		D32708CD196BE4C400A816EC /* RecordSummaryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordSummaryCell.h; sourceTree = "<group>"; };
+		D32708CE196BE4C400A816EC /* RecordSummaryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordSummaryCell.m; sourceTree = "<group>"; };
 		D3FF79B019600D0A007389C6 /* BookShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FF79B319600D0A007389C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D3FF79B519600D0A007389C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,11 +151,11 @@
 		D3FF79BB19600D0A007389C6 /* BookShelf */ = {
 			isa = PBXGroup;
 			children = (
+				D32708CD196BE4C400A816EC /* RecordSummaryCell.h */,
+				D32708CE196BE4C400A816EC /* RecordSummaryCell.m */,
 				D32708C6196B967000A816EC /* AddReadingRecordPopUpView.xib */,
-				D32708BE196B6BB700A816EC /* RecordSummaryCell.h */,
-				D32708BF196B6BB700A816EC /* RecordSummaryCell.m */,
-				D3EB00DB196AEE1600F972D3 /* Book.h */,
-				D3EB00DC196AEE1700F972D3 /* Book.m */,
+				D32708CA196BE4B200A816EC /* Book.h */,
+				D32708CB196BE4B200A816EC /* Book.m */,
 				D3FF79C419600D0A007389C6 /* AppDelegate.h */,
 				D3FF79C519600D0A007389C6 /* AppDelegate.m */,
 				D3FF79C719600D0A007389C6 /* Main.storyboard */,
@@ -343,16 +343,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3FF79CF19600D0A007389C6 /* MasterViewController.m in Sources */,
-				D32708C0196B6BB700A816EC /* RecordSummaryCell.m in Sources */,
 				D32708BD196B66EC00A816EC /* ReadingRecordTableViewController.m in Sources */,
 				38D52BFF19603DE300BD1664 /* BookInfoCell.m in Sources */,
+				D32708CC196BE4B200A816EC /* Book.m in Sources */,
 				D3FF79C619600D0A007389C6 /* AppDelegate.m in Sources */,
 				D32708B8196B660A00A816EC /* ReadingRecord.m in Sources */,
 				38D52C0219603EFC00BD1664 /* BookDetailTableViewController.m in Sources */,
 				D3FF79C219600D0A007389C6 /* main.m in Sources */,
-				D3EB00DD196AEE1700F972D3 /* Book.m in Sources */,
 				D32708C5196B8BCF00A816EC /* AddReadingRecordPopupViewController.m in Sources */,
 				D3FF79CC19600D0A007389C6 /* BookShelf.xcdatamodeld in Sources */,
+				D32708CF196BE4C400A816EC /* RecordSummaryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
