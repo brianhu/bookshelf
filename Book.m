@@ -11,11 +11,10 @@
 
 @implementation Book
 
-@dynamic bookID;
 @dynamic bookName;
 @dynamic buyDate;
 @dynamic buyPrice;
-@dynamic relationship;
+@dynamic records;
 
 - (NSString *)buyDateToString {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

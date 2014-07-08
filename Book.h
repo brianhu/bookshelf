@@ -12,10 +12,9 @@
 
 @interface Book : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * bookID;
 @property (nonatomic, retain) NSString * bookName;
 @property (nonatomic, retain) NSDate * buyDate;
 @property (nonatomic, retain) NSNumber * buyPrice;
-@property (nonatomic, retain) NSManagedObject *relationship;
+@property (nonatomic, retain) NSManagedObject *records;
 - (NSString *)buyDateToString;
 @end
