@@ -172,6 +172,12 @@
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"ReadingRecordSegue"]) {
+        [[segue destinationViewController] setBook:_book];
+    }
+}
 
 #pragma mark - private
 - (void)pickerChanged:(id)sender
