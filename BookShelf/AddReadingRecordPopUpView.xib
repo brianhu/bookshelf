@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="dateField" destination="YbF-pc-sMH" id="D5Z-Ve-UyM"/>
                 <outlet property="hourField" destination="iHP-At-cbU" id="xeX-Xe-D74"/>
+                <outlet property="view" destination="iN0-l3-epB" id="biq-rF-qX0"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

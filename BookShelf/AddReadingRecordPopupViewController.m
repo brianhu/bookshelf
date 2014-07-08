@@ -9,7 +9,8 @@
 #import "AddReadingRecordPopupViewController.h"
 
 @interface AddReadingRecordPopupViewController ()
-
+@property (strong, nonatomic) NSDate *date;
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @end
 
 @implementation AddReadingRecordPopupViewController
@@ -27,6 +28,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIDatePicker *timePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 250, 0, 0)];
+    [timePicker addTarget:self action:@selector(pickerChanged:)               forControlEvents:UIControlEventValueChanged];
+    timePicker.datePickerMode = UIDatePickerModeDate;
+    [_dateField setInputView:timePicker];
+    
+    _dateFormatter = [[NSDateFormatter alloc] init];
+    [_dateFormatter setDateFormat:@"d/M/Y"];
+    
+    _dateField.text = [_dateFormatter stringFromDate:[NSDate date]];
+    _date = [NSDate date];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +59,13 @@
 */
 
 - (IBAction)submit:(id)sender {
-    [_delegate dataSubmitted:nil time:(long *)[_hourField.text integerValue]];
+    [_delegate dataSubmitted:_date hour:[_hourField.text integerValue]];
+}
+
+#pragma mark - private
+- (void)pickerChanged:(id)sender
+{
+    _date = [sender date];
+    _dateField.text = [_dateFormatter stringFromDate:[sender date]];
 }
 @end
