@@ -10,7 +10,7 @@
         <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReadingRecord" inverseName="bookID" inverseEntity="ReadingRecord" syncable="YES"/>
         <userInfo/>
     </entity>
-    <entity name="ReadingRecord" syncable="YES">
+    <entity name="ReadingRecord" representedClassName="ReadingRecord" syncable="YES">
         <attribute name="readDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="readHour" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
         <attribute name="recordID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
