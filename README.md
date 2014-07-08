@@ -3,11 +3,11 @@ BookShelf
 
 *   [BookShelf](#bookshelf)
     *   [Philosophy](#philosophy)
-    *   [Why using BookShelf?](#why)
-    *   [What can BookShelf do?](#what)
-*   [Future Work](#futurework)
-    *   [Future work items](#futureworkitems)
-    *   [Feel very free](#feelfree)
+    *   [Why using BookShelf?](#why-using-bookshelf)
+    *   [What can BookShelf do?](#what-can-bookshelf-do)
+*   [Future Work](#future-work)
+    *   [Future work items](#future-work-items)
+    *   [Feel very free](#feel-very-free)
 *   [License](#license)
 
 * * *
